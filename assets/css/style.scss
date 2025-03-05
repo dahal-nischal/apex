@@ -823,6 +823,14 @@ a {
     max-width: 550px;
     margin: 0 auto;
   }
+  .btns {
+    margin-top: 35px;
+  
+    .primary-btn {
+      width: 100%;
+      justify-content: center;
+    }
+  }
 }
 
 .form {
@@ -851,14 +859,7 @@ a {
   }
 }
 
-.btns {
-  margin-top: 35px;
 
-  .primary-btn {
-    width: 100%;
-    justify-content: center;
-  }
-}
 
 .s-contact-img {
   position: relative;
