@@ -164,7 +164,9 @@ a {
 .gap-45 {
   gap: 45px;
 }
-
+.gap-60{
+  gap: 60px;
+}
 // CONTAINER
 .container {
   width: 1140px;
@@ -513,7 +515,7 @@ a {
 // ABOUT SECTION START HERE
 .about-grid {
   grid-template-columns: 1fr 1.2fr;
-
+gap: 60px;
   .img-wrapper {
     width: 100%;
     height: 100%;
@@ -528,7 +530,7 @@ a {
 }
 
 .about-content {
-  padding-left: 60px;
+  
 
   h2 {
     margin-bottom: 12px;
@@ -543,6 +545,46 @@ a {
   }
 }
 
+
+.box {
+ display: grid;
+ grid-template-columns: 1fr 1fr;
+  color: $white;
+  align-items: center;
+  
+  &.mission {
+      background: $background;
+  }
+
+  &.vision {
+      background: $button;
+  }
+
+.content{
+  padding: 40px 60px;
+
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+  h2 {
+      margin: 0;
+      font-size: 24px;
+  }
+
+  p {
+      font-size: 14px;
+  }
+
+  .image {
+display: flex;
+      img {
+        height: 100%;
+          max-width: 100%;
+      }
+  }
+}
 // ABOUT SECTION END HERE
 // SERVICES SECTION START HERE
 .topic {
@@ -587,7 +629,7 @@ a {
       bottom: 0;
       left: 0;
       padding: 10px 20px;
-      background: #8cc058;
+      background: $button;
       color: #fff;
     }
   }
@@ -672,7 +714,7 @@ a {
   display: grid;
   grid-template-columns: repeat(14, 12px);
   grid-template-rows: repeat(11, 12px);
-  transition: all 0.5s ease-in-out;
+  transition: $transition;
 }
 
 .testimonial-img {
@@ -684,7 +726,7 @@ a {
 
 .img:hover {
   transform: translateY(-3px);
-  transition: all 0.5s ease-in-out;
+  transition: $transition;
 }
 
 .square-box {
@@ -811,7 +853,87 @@ a {
     }
   }
 }
+.choose-grid {
+  grid-template-columns: 1fr 1.1fr;
+}
+.heading h5 {
+  margin-bottom: 10px;
+}
+.heading h2 {
+  margin-bottom: 25px;
+}
+.heading p {
+  margin-bottom: 25px;
+}
+.heading .primary-btn {
+  margin-top: 10px;
+}
+.why-card {
+  position: relative;
+  width: 100%;
+  background: #fff;
+  padding: 30px;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 0px 6px 32px rgba(140, 192, 88, 0.1215686275);
+  transition: $transition;
+  overflow: hidden;
+}
+.why-card::before {
+  content: "";
+  position: absolute;
+  width: 0%;
+  height: 5px;
+  background:$button;
+  right: 0;
+  bottom: 0;
+  transition: $transition;
+}
+.why-card img {
+  width: auto;
+  height: 45px;
+}
+.why-card h4 {
+  font-size: 16px;
+  margin-top: 10px;
+}
+.why-card:hover::before {
+  left: 0%;
+  width: 100%;
+  transition: $transition;
+}
 
+.key {
+  background: linear-gradient(to bottom, #f5f9ff, #f5f9ff);
+}
+
+.key-grid {
+  display: grid;
+  grid-template-columns: 1.1fr 1fr;
+}
+// ABOUT PAGE END HERE
+// TRACKING PAGE START HERE
+.tracking-section{
+  background: $button;
+  .tracking-wrapper{
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+  //  justify-content: center;
+  color: $white;
+   h2{
+    margin-bottom: 12px;
+   }
+   .tracking-box{
+    margin-top: 30px;
+    gap: 30px;
+    .primary-btn{
+      justify-content: center;
+    }
+   }
+  }
+}
+// TRACKING PAGE END HERE
 // CONTACT SINGLE PAGE START HERE
 .contact {
   .heading {
@@ -832,7 +954,15 @@ a {
     }
   }
 }
-
+input {
+  width: 100%;
+  background: #e8e8e8;
+  padding: 14px 20px;
+  border-radius: 5px;
+  font-size: 18px;
+  font-family: $montserrat;
+  color: $form;
+}
 .form {
   display: flex;
   flex-direction: column;
@@ -910,7 +1040,7 @@ a {
     text-decoration: none;
     position: relative;
     z-index: 1;
-    transition: all 0.5s ease-in-out;
+    transition: $transition;
 
     &:after {
       content: "";
@@ -922,7 +1052,7 @@ a {
       width: 0;
       left: 0;
       bottom: -3px;
-      transition: all 0.5s ease-in-out;
+      transition: $transition;
     }
 
     &:hover:after {
