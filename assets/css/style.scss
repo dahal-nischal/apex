@@ -581,7 +581,7 @@ gap: 60px;
 display: flex;
       img {
         height: 100%;
-          max-width: 100%;
+          width: 100%;
       }
   }
 }
@@ -993,6 +993,7 @@ input {
 
 
 .s-contact-img {
+  width: 100%;
   position: relative;
   background: url(../images/apex.png);
   padding: 60px 80px;
@@ -1182,6 +1183,164 @@ h4 {
 .navbar {
   display: none;
 }
+// mobile menu 
+.mobilemenucontainer {
+  display: block;
+  background: #fff;
+}
+
+.mobilemenucontainer .visible-menu {
+  width: 100%;
+  height: 100%;
+  background: #fff;
+  overflow: hidden;
+  z-index: 22;
+  padding: 15px 0px;
+  transition: all 0.5s ease-in-out;
+}
+
+.mobilemenucontainer .visible-menu .upper-logo {
+  width: auto;
+  height: 75px;
+  -o-object-fit: cover;
+  object-fit: cover;
+  transition: all 0.5s ease-in-out;
+}
+
+.mobilemenucontainer .visible-menu .upper-logo img {
+  width: auto;
+  height: 75px;
+  transition: all 0.5s ease-in-out;
+}
+
+.mobilemenucontainer .visible-menu.small {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: auto;
+  padding: 10px 0px;
+  box-shadow: 0px 4px 32px rgba(0, 128, 175, 0.1215686275);
+  z-index: 999;
+  transition: all 0.5s ease-in-out;
+}
+
+.mobilemenucontainer .visible-menu.small .upper-logo {
+  width: auto;
+  height: 60px;
+  -o-object-fit: cover;
+  object-fit: cover;
+  transition: all 0.5s ease-in-out;
+}
+
+.mobilemenucontainer .visible-menu.small .upper-logo img {
+  width: auto;
+  height: 60px;
+  transition: all 0.5s ease-in-out;
+}
+
+.mobilemenucontainer .upper-logo {
+  width: auto;
+  height: 45px;
+  -o-object-fit: cover;
+  object-fit: cover;
+  transition: all 0.5s ease-in-out;
+}
+
+.mobilemenucontainer .upper-logo img {
+  width: auto;
+  height: 45px;
+}
+
+.mobilemenucontainer .ham-icon {
+  font-size: 30px;
+  color: $button;
+}
+
+.mobilemenucontainer .menucontents {
+  background: #fff;
+  position: fixed;
+  left: -250px;
+  opacity: 0;
+  top: 0;
+  /* overflow: hidden; */
+  visibility: hidden;
+  transition: all 0.5s ease-in-out;
+  height: 100%;
+  width: 100%;
+  overflow-y: scroll;
+  z-index: 999;
+}
+
+.mobilemenucontainer .menucontents.active {
+  visibility: visible;
+  opacity: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+}
+
+.mobilemenucontainer .menucontents .menutop {
+  background: #fff;
+  box-shadow: 0px 4px 32px rgba(0, 128, 175, 0.1215686275);
+}
+
+.mobilemenucontainer .menucontents .menutop .menu-flex {
+  padding: 10px 0px;
+}
+
+.mobilemenucontainer .menucontents .menutop .menu-flex img {
+  filter: brightness(1) invert(0);
+}
+
+.mobilemenucontainer .menucontents .menucontentslist {
+  padding: 10px 0;
+}
+
+.mobilemenucontainer .menucontents .menucontentslist .menuindividual {
+  padding: 15px 20px;
+}
+
+.mobilemenucontainer .menucontents .menucontentslist a {
+  color: #262626;
+  text-decoration: none;
+  display: block;
+  font-weight: 400;
+  display: block;
+  font-weight: 400;
+  transition: all 0.5s ease-in-out;
+  text-decoration: none;
+}
+
+.mobilemenucontainer .menucontents .menucontentslist a:hover {
+  transition: all 0.5s ease-in-out;
+}
+
+.mobilemenucontainer .cross-icon {
+  font-size: 40px;
+  color: #262626;
+}
+
+.menuaccordians .menuaccordian {
+  padding: 0px 30px;
+}
+
+.menuaccordians .menuaccordian img {
+  width: auto;
+  height: 6px;
+}
+
+.acc-content {
+  max-height: 0;
+  margin: 0 2rem;
+  padding-left: 1rem;
+  overflow: hidden;
+  transition: max-height 0.3s ease-in-out;
+}
+
+.acc-content a {
+  margin-bottom: 15px;
+}
 // NAVBAR SECTION END HERE
 // HERO SECTIONN START HERE
 .hero-section {
@@ -1351,6 +1510,128 @@ gap: 45px;
     padding: 15px 0px;
   }
 }
+// ABOUT SINGLE PAGE START HERE
+.single-main {
+  padding: 45px 0px;
+
+
+  
+  .single-main-wrapper {
+    h1 {
+      margin-bottom: 12px;
+    }
+
+   
+  }
+}
+.choose-grid {
+  grid-template-columns: 1fr ;
+}
+.heading h5 {
+  margin-bottom: 10px;
+}
+.heading h2 {
+  margin-bottom: 20px;
+}
+.heading p {
+  margin-bottom: 25px;
+}
+.heading .primary-btn {
+  margin-top: 10px;
+}
+.why-card {
+  padding: 25px;
+}
+
+.why-card img {
+  width: auto;
+  height: 45px;
+}
+.why-card h4 {
+  font-size: 16px;
+  margin-top: 10px;
+}
+
+
+
+.key-grid {
+  grid-template-columns: 1.1fr 1fr;
+}
+// ABOUT PAGE END HERE
+// TRACKING PAGE START HERE
+.tracking-section{
+  .tracking-wrapper{
+   h2{
+    margin-bottom: 10px;
+   }
+   .tracking-box{
+    margin-top: 30px;
+    gap: 25px;
+    
+   }
+  }
+}
+// TRACKING PAGE END HERE
+// CONTACT SINGLE PAGE START HERE
+.contact {
+  
+  .btns {
+    margin-top: 30px;
+  }
+  .grid-2{
+    grid-template-columns: 1fr;
+  }
+}
+input {
+  padding: 14px 20px;
+  font-size: 16px;
+}
+.form {
+
+  input {
+    font-size: 16px;
+  }
+
+  textarea {
+    font-size: 16px;
+  }
+}
+.s-contact-img {
+  padding: 50px 60px;
+}
+
+.contacts-info {
+
+  h2 {
+    font-size: 30px;
+    margin-bottom: 15px;
+  }
+
+  p {
+    margin-bottom: 25px;
+  }
+}
+
+.info {
+  gap: 10px;
+
+  h4 {
+    font-size: 18px;
+  }
+
+  
+}
+
+.map-container {
+  margin-top: 0px;
+
+  .responsive-map {
+    padding-bottom: 50%;
+    top: 55px;
+
+    
+  }
+}
 }
 // TABLET SECTION END HERE
 // MOBILE VIEW START HERE
@@ -1444,6 +1725,57 @@ gap: 45px;
   // NAVBAR SECTION START HERE
   .navbar {
     display: none;
+  }
+  .mobilemenucontainer .visible-menu {
+    padding: 10px 0px;
+  }
+
+  .mobilemenucontainer .visible-menu .upper-logo {
+    height: 65px;
+  }
+
+  .mobilemenucontainer .visible-menu .upper-logo img {
+    height: 65px;
+  }
+
+  .mobilemenucontainer .visible-menu.small {
+    padding: 8px 0px;
+  }
+
+  .mobilemenucontainer .visible-menu.small .upper-logo {
+    height: 50px;
+  }
+
+  .mobilemenucontainer .visible-menu.small .upper-logo img {
+    height: 50px;
+  }
+
+  .mobilemenucontainer .upper-logo {
+    height: 65px;
+  }
+
+  .mobilemenucontainer .upper-logo img {
+    height: 65px;
+  }
+
+  .mobilemenucontainer .ham-icon {
+    font-size: 25px;
+  }
+
+  .mobilemenucontainer .menucontents .menutop .menu-flex {
+    padding: 8px 0px;
+  }
+
+  .mobilemenucontainer .menucontents .menucontentslist {
+    padding: 8px 0;
+  }
+
+  .mobilemenucontainer .menucontents .menucontentslist .menuindividual {
+    padding: 10px 15px;
+  }
+
+  .mobilemenucontainer .cross-icon {
+    font-size: 35px;
   }
   // NAVBAR SECTION END HERE
   // HERO SECTIONN START HERE
@@ -1603,7 +1935,7 @@ gap: 45px;
         }
   
         .footer-img {
-          height: 90px;
+          height: 65px;
           margin-bottom: 20px;
         }
   
@@ -1614,5 +1946,64 @@ gap: 45px;
       padding: 15px 0px;
     }
   }
+  // contact page start here
+  // CONTACT SINGLE PAGE START HERE
+.contact {
+  
+  .btns {
+    margin-top: 25px;
+  }
+ 
+}
+input {
+  padding: 12px 16px;
+  font-size: 16px;
+}
+.form {
+
+  input {
+    font-size: 16px;
+  }
+
+  textarea {
+    font-size: 16px;
+  }
+}
+.s-contact-img {
+  padding: 40px;
+}
+
+.contacts-info {
+
+  h2 {
+    font-size: 25px;
+    margin-bottom: 15px;
+  }
+
+  p {
+    margin-bottom: 20px;
+  }
+}
+
+.info {
+  gap: 10px;
+
+  h4 {
+    font-size: 18px;
+  }
+
+  
+}
+
+.map-container {
+  margin-top: 0px;
+
+  .responsive-map {
+    padding-bottom: 80%;
+    top: 55px;
+
+    
+  }
+}
   }
 // MOBILE VIEW END HERE

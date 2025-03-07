@@ -1,3 +1,45 @@
+$(document).ready(function () {
+  $(window).on("scroll", function () {
+    // Header Sticky JS
+    if ($(this).scrollTop() > 10) {
+      $(".navbar").addClass("small");
+    } else {
+      $(".navbar").removeClass("small");
+    }
+  });
+  $(window).scroll(function () {
+    if ($(this).scrollTop() > 50) {
+      $(".visible-menu").addClass("small");
+    } else {
+      $(".visible-menu").removeClass("small");
+    }
+  });
+  // HAMBURGER
+  $(".menuindividual").click(function () {
+    $(".menucontents").removeClass("active");
+  });
+  $(".ham-icon").click(function () {
+    $(".menucontents").toggleClass("active");
+  });
+  $(".cross-icon").click(function () {
+    $(".menucontents").toggleClass("active");
+  });
+});
+// ACCORDIAN section
+var btns = document.querySelectorAll(".menuaccordians");
+// fn
+function accordion() {
+  // this = the btn | icon & bg changed
+  this.classList.toggle("is-open");
+  // the acc-content
+  var content = this.nextElementSibling;
+  // IF open, close | else open
+  if (content.style.maxHeight) content.style.maxHeight = null;
+  else content.style.maxHeight = content.scrollHeight + "px";
+}
+// event
+btns.forEach((el) => el.addEventListener("click", accordion));
+
 // TESTIMONIAL
 var swiper = new Swiper(".tesSwiper", {
     slidesPerView: 2,
